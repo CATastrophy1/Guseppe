@@ -56,16 +56,17 @@
             <button type="button" class="guseppism__cards-btn guseppism__cards-btn--3"></button>
         </div>
 
-        <form action="https://formsubmit.co/gohhog89@gmail.com" method="POST" class="guseppism__form">
+        <form action="https://formsubmit.co/d24aee17ab8b4da264230018ead2cc6a" method="post" class="guseppism__form">
             <h3 class="guseppism__form-title">
                 Zostań wyznawcą guseppizmu!
             </h3>
             <label for="name">Podaj swoje imię i nazwisko:</label>
-            <input type="text" id="name">
+            <input type="text" id="name" required>
             <label for="email">Podaj swój email:</label>
-            <input type="email" id="email">
+            <input type="email" id="email" required>
             <label for="reason">Dlaczego chcesz zostać wyznawcą Guseppa?</label>
-            <textarea id="reason"></textarea>
+            <textarea id="reason" required></textarea>
+            <input type="hidden" name="_next" value="/thankyou.html">
 
             <button class="guseppism__form-send-btn">Wyślij aplikację</button>
 
