@@ -22,7 +22,8 @@ $lighter-main-color: rgb(211, 211, 211);
 }
 
 .section-color {
-	background-color: rgb(222, 222, 222);
+	background-image: linear-gradient(to right bottom, #ff77f4ba, #ff75c3bb, #ff8c94ba, #ffb06fbf, #ffd760bc, #f9f971bc);
+	color: #fff;
 }
 
 .nav {
@@ -39,7 +40,6 @@ $lighter-main-color: rgb(211, 211, 211);
 		margin: 0 auto;
 		padding-bottom: 1em;
 		width: 100%;
-		max-width: 1200px;
 		transition: background-color 0.3s;
 		z-index: 20;
 
@@ -187,7 +187,7 @@ $lighter-main-color: rgb(211, 211, 211);
 			}
 			&-text {
 				text-align: justify;
-				padding: 0 2em;
+				padding: 0 .5em;
 				line-height: 1.4rem;
 				color: #a8343c;
 			}
@@ -264,7 +264,7 @@ $lighter-main-color: rgb(211, 211, 211);
 	display: flex;
 	flex-direction: column;
 	padding: 2em 0.5em;
-	overflow: hidden; 
+	overflow: hidden;
 	&__title {
 		text-align: center;
 		margin-bottom: 1.2em;
@@ -279,7 +279,7 @@ $lighter-main-color: rgb(211, 211, 211);
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
-		
+
 		// padding-top: 8em;
 		&-wheel {
 			position: relative;
@@ -343,11 +343,10 @@ $lighter-main-color: rgb(211, 211, 211);
 		align-items: center;
 		&-title {
 			margin-bottom: 1em;
-			color: black;
 		}
 		&-text {
 			text-align: justify;
-			padding: 0 2em;
+			padding: 0 0.5em;
 			line-height: 1.4rem;
 			color: #a8343c;
 		}
@@ -358,6 +357,7 @@ $lighter-main-color: rgb(211, 211, 211);
 
 		overflow: hidden;
 		background: #fff;
+		color: #000;
 		margin: 0 0.5em;
 		border-radius: 6px;
 
@@ -373,7 +373,7 @@ $lighter-main-color: rgb(211, 211, 211);
 			opacity: 0;
 			&-box1 {
 				width: 100px;
-				margin: .5em 0;
+				margin: 0.5em 0;
 				display: flex;
 				flex-direction: column;
 
@@ -401,7 +401,6 @@ $lighter-main-color: rgb(211, 211, 211);
 				&-stars {
 					margin-bottom: 0.5em;
 				}
-				
 			}
 		}
 		&-btn {
@@ -440,6 +439,7 @@ $lighter-main-color: rgb(211, 211, 211);
 			margin: 1em;
 		}
 		label {
+			color: #000;
 			margin: 0.5em 0;
 		}
 		input,
@@ -486,6 +486,53 @@ $lighter-main-color: rgb(211, 211, 211);
 	p {
 		text-align: center;
 		padding: 1em;
+		font-weight: bold;
+	}
+}
+
+.thankyou {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to right bottom, #ff77f4, #ff75c4, #ff8c94, #ffb06f, #ffd660, #f9f871);
+		opacity: 0.6;
+		z-index: -2;
+	}
+	&__text {
+		text-transform: uppercase;
+		font-size: 3rem;
+		color: #fff;
+	}
+	&__btn {
+		width: 30%;
+		font-size: 1.6rem;
+		margin-top: 2em;
+		padding: 0.5em 0;
+		border: none;
+		border-radius: 10px;
+		background-color: #fff;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+
+		a{
+			text-decoration: none;
+			color: #000;
+		
+		}
+
+		&:hover {
+			background-color: #000;	
+		}
+		&:hover a {
+			color: #fff;
+		}
 	}
 }
 
@@ -619,9 +666,12 @@ $lighter-main-color: rgb(211, 211, 211);
 				font-size: 1.6rem;
 				margin: 1em;
 			}
-		label, input, textarea, button {
-			font-size: 1.4rem;
-		}
+			label,
+			input,
+			textarea,
+			button {
+				font-size: 1.4rem;
+			}
 		}
 	}
 	.footer {
@@ -646,7 +696,7 @@ $lighter-main-color: rgb(211, 211, 211);
 			}
 		}
 	}
-	
+
 	.guseppism {
 		&__explanation {
 			&-title {
@@ -676,11 +726,12 @@ $lighter-main-color: rgb(211, 211, 211);
 				font-size: 1.8rem;
 				margin: 1em;
 			}
-		label, input, textarea, button {
-			font-size: 1.6rem;
-		}
+			label,
+			input,
+			textarea,
+			button {
+				font-size: 1.6rem;
+			}
 		}
 	}
-	
-
 }
