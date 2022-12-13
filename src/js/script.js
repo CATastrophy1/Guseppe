@@ -75,12 +75,18 @@ const handleInterval = () => {
 
 const slideRight = () => {
 	if(cards[0].classList.contains('active-card')) {
+		btns.forEach(btn => btn.style.background='#ddd')
+	btn2.style.background='#000'
 		cards[0].classList.remove('active-card')
 		cards[1].classList.add('active-card')
 	} else if (cards[1].classList.contains('active-card')) {
+		btns.forEach(btn => btn.style.background='#ddd')
+	btn3.style.background='#000'
 		cards[1].classList.remove('active-card')
 		cards[2].classList.add('active-card')
 	} else {
+		btns.forEach(btn => btn.style.background='#ddd')
+	btn1.style.background='#000'
 		cards[2].classList.remove('active-card')
 		cards[0].classList.add('active-card')
 	}
@@ -157,19 +163,6 @@ navLink.forEach(link =>
 //WHEEL
 spinBtn.addEventListener('click', handleInterval)
 //OPINIONS
-// btn1.addEventListener('click', () => {
-// 	handleDots()
-// 	cards[0].classList.add('active-card')
-// })
-// btn2.addEventListener('click', () => {
-// 	handleDots()
-// 	cards[1].classList.add('active-card')
-	
-// })
-// btn3.addEventListener('click', () => {
-// 	handleDots()
-// 	cards[2].classList.add('active-card')
-// })
-// intervalFunction()
 
 btns.forEach(btn => btn.addEventListener('click', handleDotsBtns))
+intervalFunction()
