@@ -142,7 +142,6 @@ facesImgs.forEach(img => {
 
 //NAV
 const openNav = () => {
-	window.scrollTo(0, 0)
 	navBox.classList.toggle('active-link-box')
 	nav.classList.toggle('active-nav')
 }
