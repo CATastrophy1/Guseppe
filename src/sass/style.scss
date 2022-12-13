@@ -37,8 +37,10 @@ $lighter-main-color: rgb(211, 211, 211);
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+		padding-bottom:1em ;
 		width: 100%;
 		max-width: 1200px;
+		transition: background-color .3s;
 		z-index: 20;
 
 		&-title {
@@ -114,6 +116,9 @@ $lighter-main-color: rgb(211, 211, 211);
 .active-link-box {
 	animation: open-nav-animation 0.3s forwards;
 }
+
+	
+
 
 .header {
 	position: relative;
@@ -427,6 +432,22 @@ $lighter-main-color: rgb(211, 211, 211);
 				right: 20px;
 			}
 			
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&-title {
+			margin: 1em;
+		}
+		label {
+			margin: 0.5em 0;
+		}
+		input {
+			width: 90%;
+			padding: 0.3em;
 		}
 	}
 }

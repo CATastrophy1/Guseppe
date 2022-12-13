@@ -3,6 +3,7 @@ const burgerBtn = document.querySelector('.nav__bar-burger-btn')
 const navBox = document.querySelector('.nav__link-box')
 const navLink = document.querySelectorAll('.nav__link-box-link')
 const nav = document.querySelector('.nav')
+const navBar = document.querySelector('.nav__bar')
 
 //50faces
 const facesImgs = document.querySelectorAll('.faces50__img-box-img')
@@ -111,12 +112,6 @@ const handleDotsBtns = (e) => {
 	}
 }
 
-// const handleDots = (e) => {
-// 	cards.forEach(card => {
-// 		card.classList.remove('active-card')
-// 	})
-// 	e.target.style.backgroundColor = '#000'
-// }
 
 //50FACES
 function generateUniqueRandom(maxNr) {
@@ -151,6 +146,12 @@ const openNav = () => {
 	navBox.classList.toggle('active-link-box')
 	nav.classList.toggle('active-nav')
 }
+function addShadow () {
+	if (window.scrollY >= 500) {
+	navBar.style.backgroundColor= 'rgba(0,0,0,.4)'
+	} else {navBar.style.background = 'none'}
+
+}
 
 burgerBtn.addEventListener('click', openNav)
 navLink.forEach(link =>
@@ -166,3 +167,4 @@ spinBtn.addEventListener('click', handleInterval)
 
 btns.forEach(btn => btn.addEventListener('click', handleDotsBtns))
 intervalFunction()
+window.addEventListener('scroll', addShadow)
