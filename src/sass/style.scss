@@ -37,10 +37,10 @@ $lighter-main-color: rgb(211, 211, 211);
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		padding-bottom:1em ;
+		padding-bottom: 1em;
 		width: 100%;
 		max-width: 1200px;
-		transition: background-color .3s;
+		transition: background-color 0.3s;
 		z-index: 20;
 
 		&-title {
@@ -116,9 +116,6 @@ $lighter-main-color: rgb(211, 211, 211);
 .active-link-box {
 	animation: open-nav-animation 0.3s forwards;
 }
-
-	
-
 
 .header {
 	position: relative;
@@ -374,10 +371,10 @@ $lighter-main-color: rgb(211, 211, 211);
 			opacity: 0;
 			&-box1 {
 				width: 100px;
-				margin: 1em 0;
+				margin: .5em 0;
 				display: flex;
 				flex-direction: column;
-		
+
 				align-items: center;
 				&-img {
 					height: 75px;
@@ -399,12 +396,11 @@ $lighter-main-color: rgb(211, 211, 211);
 				margin: 0.5em 1em;
 				width: 100%;
 
-				// &-stars {
-				// }
-				// &-opinion {
-				// }
+				&-stars {
+					margin-bottom: 0.5em;
+				}
+				
 			}
-			
 		}
 		&-btn {
 			position: absolute;
@@ -416,7 +412,7 @@ $lighter-main-color: rgb(211, 211, 211);
 			border: none;
 			border-radius: 50%;
 			background: #ddd;
-			transition: background-color .3s;
+			transition: background-color 0.3s;
 			cursor: pointer;
 			&:hover {
 				background-color: rgb(127, 127, 127);
@@ -431,7 +427,6 @@ $lighter-main-color: rgb(211, 211, 211);
 			&--3 {
 				right: 20px;
 			}
-			
 		}
 	}
 	&__form {
@@ -445,9 +440,31 @@ $lighter-main-color: rgb(211, 211, 211);
 		label {
 			margin: 0.5em 0;
 		}
-		input {
+		input,
+		textarea {
+			border-radius: 4px;
 			width: 90%;
 			padding: 0.3em;
+			border: none;
+		}
+		textarea {
+			min-width: 90%;
+			max-width: 90%;
+		}
+
+		&-send-btn {
+			width: 50%;
+			margin: 0.8em;
+			padding: 0.5em 0;
+			border: none;
+			border-radius: 6px;
+			transition: color 0.3s, background-color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			}
 		}
 	}
 }
@@ -455,13 +472,18 @@ $lighter-main-color: rgb(211, 211, 211);
 .active-card {
 	display: flex;
 	animation: show-card 1s forwards;
-
-	
 }
 
 @keyframes show-card {
 	to {
 		opacity: 1;
+	}
+}
+
+.footer {
+	p {
+		text-align: center;
+		padding: 1em;
 	}
 }
 
@@ -493,6 +515,19 @@ $lighter-main-color: rgb(211, 211, 211);
 			font-size: 1.6rem;
 		}
 	}
+	.guseppism {
+		&__cards {
+			height: 250px;
+			&-card {
+				&-box1 {
+					font-size: 1.2rem;
+				}
+				&-box2 {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -511,10 +546,9 @@ $lighter-main-color: rgb(211, 211, 211);
 				margin-left: 1em;
 				&-title {
 					font-size: 1.6rem;
-					margin: 0 1em;
+					margin: 0.5em 1em;
 				}
 				&-text {
-					text-align: justify;
 					padding: 0 1em;
 					line-height: 2rem;
 					color: #a8343c;
@@ -547,12 +581,56 @@ $lighter-main-color: rgb(211, 211, 211);
 			font-size: 2rem;
 		}
 	}
+	.guseppism {
+		&__title {
+			font-size: 2.4rem;
+		}
+		&__explanation {
+			&-title {
+				font-size: 1.6rem;
+				margin: 0.5em 1em;
+			}
+			&-text {
+				padding: 0 1em;
+				line-height: 2rem;
+				color: #a8343c;
+				font-size: 1.2rem;
+			}
+		}
+		&__cards {
+			height: 200px;
+			&-title {
+				font-size: 1.6rem;
+				margin: 1em;
+			}
+			&-card {
+				&-box1 {
+					font-size: 1.4rem;
+				}
+				&-box2 {
+					font-size: 1.4rem;
+				}
+			}
+		}
+		&__form {
+			&-title {
+				font-size: 1.6rem;
+				margin: 1em;
+			}
+		label, input, textarea, button {
+			font-size: 1.4rem;
+		}
+		}
+	}
+	.footer {
+		p {
+			font-size: 1.2rem;
+		}
+	}
 }
+
 @media (min-width: 992px) {
 	.aboutme {
-		&__title {
-			font-size: 2.8rem;
-		}
 		&__content-box {
 			&-text-box {
 				&-title {
@@ -566,9 +644,41 @@ $lighter-main-color: rgb(211, 211, 211);
 			}
 		}
 	}
-	.faces50 {
-		&__title {
-			font-size: 2.8rem;
+	
+	.guseppism {
+		&__explanation {
+			&-title {
+				font-size: 1.8rem;
+			}
+			&-text {
+				line-height: 2rem;
+
+				font-size: 1.6rem;
+			}
+		}
+		&__cards {
+			&-title {
+				font-size: 1.8rem;
+			}
+			&-card {
+				&-box1 {
+					font-size: 1.6rem;
+				}
+				&-box2 {
+					font-size: 1.6rem;
+				}
+			}
+		}
+		&__form {
+			&-title {
+				font-size: 1.8rem;
+				margin: 1em;
+			}
+		label, input, textarea, button {
+			font-size: 1.6rem;
+		}
 		}
 	}
+	
+
 }
